@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JavaRestApi</display-name>
+ <!-- I will add few tags here such atht i can access the data from the app as a resource -->
+<servlet>
+<servlet-name>javaapi</servlet-name>
+<!-- in this all the definitions will exist -->
+<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+<init-param>
+<!-- parameter name is constantit says pacakage is parametr -->
+<param-name>jersey.config.server.provider.packages</param-name>
+<param-value>test</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>javaapi</servlet-name>
+<url-pattern>/rest/*</url-pattern>
+</servlet-mapping>
+</web-app>
